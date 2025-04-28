@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Requirement</title>
+    <link rel="stylesheet" href="/styles/userRequirementStyle.css">
+</head>
+<body>
+
+   <!-- Taskbar -->
+   <div class="taskbar">
+    <a href="/">Home</a>
+    <a href="/contactUs">Contact Us</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <div class="form-wrapper">
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2>Select!</h2>
+            <p>Fill out the requirements to get started.</p>
+            
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <form method="POST" action="/searchingMaids">
+
+                <!-- Maid Work Type -->
+                <div class="input-container">
+                    <label class="input-label" for="maid_work">Type of Work:</label>
+                    <select id="maid_work" name="maid_work" class="input-field" required>
+                        <option value="">Select Work Type</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Cooking">Cooking</option>
+                        <option value="Babysitting">Babysitting</option>
+                    </select>
+                </div>
+
+                <!-- Working Time -->
+                <div class="input-container">
+                    <label class="input-label" for="working_time">Preferred Working Time:</label>
+                    <select id="working_time" name="working_time" class="input-field" required>
+                        <option value="">Select Working Time</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                    </select>
+                </div>
+
+                <!-- Salary Expectation -->
+                <div class="input-container">
+                    <label class="input-label" for="salary_expected">Salary Expectation (per month):</label>
+                    <select id="salary_expected" name="salary_expected" class="input-field" required>
+                        <option value="">Select Salary</option>
+                    </select>
+                </div>
+
+                <button class="submit">Search Maid</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Populate salary options dynamically
+    const salarySelect = document.getElementById('salary_expected');
+    for (let i = 1; i <= 30; i++) {
+        const option = document.createElement('option');
+        option.value = `${i}k`;
+        option.textContent = `${i}k`;
+        salarySelect.appendChild(option);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="/styles/userDetailStyle.css">
+</head>
+
+<body>
+
+    <!-- Taskbar Section -->
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/contactUs">Contact Us</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content"></div>
+
+    <!-- Container Section -->
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="avatar">
+                <img src="https://p1.hiclipart.com/preview/823/765/288/login-icon-system-administrator-user-user-profile-icon-design-avatar-face-head-png-clipart.jpg" alt="User Avatar">
+            </div>
+            <h2>Let's get you set up</h2>
+            <button class="arrow-button">→</button>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <header>
+                <h1>Fill Your Details</h1>
+            </header>
+
+            <!-- Form Section -->
+            <form method="POST" action="/UserDetailsAdd?_method=PATCH">
+
+                <!-- ✅ Hidden Email Field -->
+                <input type="hidden" id="email" name="email" value="<%= userEmail %>">
+
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="input-container">
+                    <label class="input-label" for="phone">Phone Number:</label>
+                    <input type="tel" id="phone_no" name="phone_no" class="input-field" pattern="[0-9]{10}" required placeholder="Enter phone number">
+                </div>
+
+                <div class="input-container">
+                    <label class="input-label" for="gender">Gender:</label>
+                    <select id="gender" name="gender" class="input-field" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label class="input-label" for="address">Address:</label>
+                    <input type="text" id="address" name="address" class="input-field" required placeholder="Enter your address">
+                </div>
+
+                <div class="input-container">
+                    <label class="input-label" for="aadhaar">Aadhaar Number:</label>
+                    <input type="text" id="aadhaar_no" name="aadhaar_no" class="input-field" pattern="[0-9]{12}" required placeholder="Enter Aadhaar number">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="buttons">
+                    <button type="submit" class="submit">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

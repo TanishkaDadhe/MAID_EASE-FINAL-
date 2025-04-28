@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles/adminRequestInboxStyle.css">
+</head>
+<body>
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/adminLogin">Logout</a>
+    </div>
+
+    <h1>Request Inbox</h1>
+
+    <!-- <% if (adminId) { %>
+        <p class="welcome-text">You are now logged in as <strong><%= adminId %></strong></p>
+    <% } else { %>
+        <p class="error-text">Error: Admin ID not found.</p>
+    <% } %> -->
+
+    <div class="maid-container">
+        <% maids.forEach(maid => { %>
+            <div class="maid-card">
+                <h2><strong><%= maid.maid_name %></strong></h2><br>
+
+                <!-- Display pending requests if any -->
+                <% if (maid.requests && maid.requests.length > 0) { %>
+                    <!-- <h3>Pending Requests:</h3> -->
+                    <% maid.requests.forEach(request => { %>
+                        <div class="request">
+                            <p>User: <%= request.user_email %></p>
+                            <p>Status: <%= request.status %></p>
+
+                            <form method="POST" action="/admin/acceptRequest">
+                                <input type="hidden" name="maid_id" value="<%= maid.maid_id %>">
+                                <input type="hidden" name="user_email" value="<%= request.user_email %>">
+                                <button type="submit" name="action" value="accept" class="accept">Accept</button>
+                                <button type="submit" name="action" value="decline" class="decline">Decline</button>
+                            </form>
+
+                            <br>
+                            <hr class="hr">
+                        </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        <% }); %>
+    </div>
+
+</body>
+</html>
+

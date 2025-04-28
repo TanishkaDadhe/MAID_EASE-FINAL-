@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* background: linear-gradient(90deg, #f1ca56, #e89b0d);  */
+    /* background-color: #ffffff; */
+    color: #404040;
+    text-align: center;
+    padding-top: 60px;
+    background: #f0f0f0; /* Light background for contrast */
+    background-image: url('../images/image3.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+}
+
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.taskbar a {
+    color: #404040;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.error-text {
+    font-size: 18px;
+    color: red;
+}
+
+/* 🔹 Maid Data Cards Styling */
+.maid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.maid-card {
+    /* background: #ffffffe7; */
+    /* background: linear-gradient(90deg, #fec43f, #ffb508);  */
+    /* background: linear-gradient(90deg, #5a0ac2eb, #feae00);  */
+    background: linear-gradient(90deg, #f6bf3f, #f6a400); 
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left; 
+    border: 1px solid #404040dc; 
+}
+
+/* .maid-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #e89b0d;
+} */
+
+.maid-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #404040;
+    /* color: rgba(255, 255, 255, 0.922); */
+}
+
+.maid-card h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #404040;
+    /* color: white; */
+    text-align: center;
+}
+
+.maid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add{
+    display: flex;
+    margin-left: 635px;
+    background-color: #2980b9; /* Blue color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: #0a5385; /* Darker blue when hovered */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+  
+.btn-add:active {
+    background-color: #ffffff; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+
+.btn-inbox{
+    display: flex;
+    margin-left: 640px;
+    background-color: #6605b6d3; /* Blue color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-inbox:hover {
+    background-color: #500091; /* Darker blue when hovered */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+  
+.btn-inbox:active {
+    background-color: #ffffff; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+/* button styling */
+
+.button-56 {
+    margin-left: 640px;
+    align-items: center;
+    background-color: #6605b6d3;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-56:after {
+    background-color: #000000;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .button-56:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .button-56:active {
+    background-color: #000000;
+    outline: 0;
+  }
+  
+  .button-56:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  }
+
+/* add new button  */
+
+.button-71 {
+    margin-left: 30px;
+    background-color: #2980b9;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 240px;
+    height: 47px;
+  }
+  
+  .button-71:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+  }
+  
+  .button-71:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+    .button-71 {
+      padding: 16px 48px;
+    }
+  }

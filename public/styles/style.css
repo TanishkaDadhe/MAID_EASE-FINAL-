@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; 
+    overflow: hidden; 
+}
+
+
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de); 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.taskbar a {
+    color: #404040; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+
+.main-content {
+    position: relative;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    background-image: url('/images/home_background.jpg');
+    background-size: cover;
+    background-position: center; 
+    padding-top: 50px; 
+}
+
+
+.text-and-buttons {
+    width: 70%; 
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.text-and-buttons h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #404040; 
+}
+
+.text-and-buttons p {
+    margin-bottom: 40px;
+    color: #6605b6d3;
+    font-size: 25px;
+    font-weight: 300;
+    background-color: rgb(237, 233, 233);
+
+}
+
+
+.text-and-buttons button {
+    width: 100%;
+    /* background: linear-gradient(90deg, #404040, #404040);  */
+    background: linear-gradient(90deg, #e2b633, #e69808); 
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #e3e2de;
+}
+
+.text-and-buttons button:hover {
+    /* background: linear-gradient(90deg, #f1ca56, #e89b0d);  */
+    background: linear-gradient(90deg, #e49606, #e49606); 
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}

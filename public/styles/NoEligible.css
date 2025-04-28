@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/image3.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+nav .logo span {
+    color: #f1ca56; /* Orange Theme */
+}
+
+nav a {
+    text-decoration: none;
+    color: #f1ca56;
+    font-size: 16px;
+}
+
+/* Taskbar */
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de); 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.taskbar a {
+    color: #404040; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin-right: 50px;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+
+/* Header */
+.no-maid-header {
+   
+    background-size: cover;
+    text-align: center;
+    padding: 80px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.no-maid-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.no-maid-header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* No Maid Container */
+.no-maid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 47vh;
+    padding: 20px;
+}
+
+/* No Maid Content */
+.no-maid-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+   
+}
+
+.no-maid-content img {
+    width: 80%;
+    max-width: 250px;
+}
+
+.no-maid-content h2 {
+    color: #e89b0d;
+    margin-top: 10px;
+}
+
+.no-maid-content p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.retry {
+    background: #f4a30e;
+    color: white;
+}
+
+.retry:hover {
+    background: #eb9100;
+}
+
+.contact {
+    background: #395067;
+    color: white;
+}
+
+.contact:hover {
+    background: #243241;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .no-maid-content {
+        width: 90%;
+    }
+}

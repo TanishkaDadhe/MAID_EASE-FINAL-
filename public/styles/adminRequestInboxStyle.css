@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* background: linear-gradient(90deg, #f1ca56, #e89b0d);  */
+    color: #404040;
+    text-align: center;
+    padding-top: 60px;
+    background: #f0f0f0; /* Light background for contrast */
+    background-image: url('../images/image3.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+}
+
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.taskbar a {
+    color: #404040;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.welcome-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.error-text {
+    font-size: 18px;
+    color: red;
+}
+
+/* 🔹 Maid Data Cards Styling */
+.maid-container {
+    display: block; /* Change to block so all cards stack vertically */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%; /* To make the container grow vertically */
+}
+
+/* Styling for each maid card */
+.maid-card {
+    background: linear-gradient(90deg, #f6bf3f, #f6a400);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+    border: 1px solid #404040dc;
+    margin-bottom: 20px; /* Space between the cards */
+    height: auto; /* Allow the card to adjust its height */
+}
+
+
+/* .maid-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #e89b0d;
+} */
+
+.maid-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #404040;
+    /* color: rgba(255, 255, 255, 0.922); */
+}
+
+.maid-card h2 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #404040;
+    /* color: white; */
+    text-align: left;
+}
+
+.maid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.maid-card hr {
+    color: #404040;
+}
+
+.btn-add{
+    display: flex;
+    margin-left: 635px;
+    background-color: #2980b9; /* Blue color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: #0a5385; /* Darker blue when hovered */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+  
+.btn-add:active {
+    background-color: #ffffff; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+
+.btn-inbox{
+    display: flex;
+    margin-left: 640px;
+    background-color: #6605b6d3; /* Blue color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-inbox:hover {
+    background-color: #500091; /* Darker blue when hovered */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+  
+.btn-inbox:active {
+    background-color: #ffffff; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+.accept{
+    background-color: #008d05; /* Green */
+    color: white;
+    /* padding: 10px 20px;  */
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    font-size: 16px; 
+    display: inline-block; 
+    width: 80px;
+    height: 30px;
+}
+
+.accept:hover{
+    background-color: #016504; 
+    opacity: 0.8; 
+}
+
+.decline{
+    background-color: rgb(191, 2, 2); 
+    color: white;
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    font-size: 16px; 
+    display: inline-block; 
+    width: 80px;
+    height: 30px;
+}
+
+.decline:hover{
+    background-color: #710101; 
+    opacity: 0.8; 
+}
+
+.hr{
+    color: rgb(0, 0, 0);
+}

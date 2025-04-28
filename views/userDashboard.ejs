@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/styles/userDashboardStyle.css">
+</head>
+<body>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <!-- <a href="#">Contact Us</a> -->
+        <a href="/userLogin">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- <h1><%= userEmail %> 's Dashboard</h1> -->
+        <h1 id="userName"></h1>
+
+        <!-- <h4>Welcome, <%= userEmail %>!</h4> <br> -->
+        <h4>Welcome, find your reliable househelp with a click!</h4> <br>
+
+        <form method="get" action="/userRequirement">
+            <button class="select-maid-button">Select Maid</button>
+        </form>
+
+        <br>
+        
+        <h2>Request Inbox</h2>
+        <table class="requests-table">
+            <thead>
+                <tr>
+                    <th>Name of Maid</th>
+                    <th>Contact Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (requestsSent && requestsSent.length > 0) { %>
+                    <% requestsSent.forEach(request => { %>
+                        <tr>
+                            <td><%= request.name %></td>
+                            <!-- <td><%= request.date %></td> -->
+                            <td>
+                                <%= new Date(request.date).toLocaleDateString('en-GB') %>
+                            </td>
+
+                            <td class="<%= request.status === 'Accepted' ? 'accepted-status' : request.status === 'Declined' ? 'declined-status' : '' %>">
+                                <%= request.status %>
+                                <% if (request.status === "Accepted") { %>
+                                    <p>Phone: <%= request.phone %></p> <!-- Display phone number if contacted -->
+                                <% } %>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="3">No requests sent yet.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Assuming userEmail is available as a JavaScript variable
+        const userEmail = "<%= userEmail %>"; // Replace this line with your actual variable if using server-side templating
+        const userName = userEmail.split('@')[0]; // Extract name before '@' in the email
+        document.getElementById('userName').innerText = `${userName}'s Dashboard`;
+    </script>
+
+</body>
+</html>

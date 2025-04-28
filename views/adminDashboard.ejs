@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles/admin_Dashboard_Style.css">
+   
+</head>
+<body>
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/adminLogin">Logout</a>
+    </div>
+
+    
+    <h1>Admin Dashboard</h1>
+
+    <% if (adminId) { %>
+        <p class="welcome-text"> welcome! You are now logged in as <strong><%= adminId %></strong></p>
+    <% } else { %>
+        <p class="error-text">Error: Admin ID not found.</p>
+    <% } %>
+  
+    <div class="btn">
+        <form method="get" action="/adminDashboard/requestInbox">
+            <!-- <button class="btn-inbox">Request Inbox</button> -->
+            <button class="button-56" role="button">Request Inbox</button>
+        </form>
+
+        <br>
+
+        <form method="get" action="/adminDashboard/newMaid">
+            <!-- <button class="btn-add">Add New Maid +</button> -->
+            <button class="button-71" role="button">Add New Maid +</button>
+        </form> 
+    </div>
+
+    <div class="maid-container">
+        <% maids.forEach(maid => { %>
+            <div class="maid-card">
+                <h2><strong><%= maid.maid_name %></strong></h2><br>
+                <p><strong>Phone:</strong> <%= maid.maid_phone %></p>
+                <p><strong>Gender:</strong> <%= maid.maid_gender %></p>
+                <p><strong>Address:</strong> <%= maid.maid_address %></p>
+            </div>
+        <% }); %>
+    </div>
+
+</body>
+</html>

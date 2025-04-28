@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Your Details</title>
+    <link rel="stylesheet" href="/styles/userDetailStyle.css">
+</head>
+
+<body>
+    <!-- Taskbar Section -->
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/contactUs">Contact Us</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content"></div>
+
+    <!-- Container Section -->
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="avatar">
+                <img src="https://p1.hiclipart.com/preview/823/765/288/login-icon-system-administrator-user-user-profile-icon-design-avatar-face-head-png-clipart.jpg" alt="User Avatar">
+            </div>
+            <h2>Complete Your Details</h2>
+            <button class="arrow-button">→</button>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <header>
+                <h1>Fill Your Details</h1>
+            </header>
+
+            <!-- Form Section -->
+            <form method="POST" action="/adminDashboard/addMaid/info">
+                <input type="hidden" name="maid_id" value="<%= maid_id || '' %>">
+            
+                <div class="input-group">
+                    <label for="hours">Working Hours</label>
+                    <select id="working_hrs" name="working_hrs" required>
+                        <option value="">Select Hours</option>
+                        <option value="1 hr">1 hr</option>
+                        <option value="3 hr">3 hr</option>
+                        <option value="24 hrs">24 hrs</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="time">Working Time</label>
+                    <select id="working_time" name="working_time" required>
+                        <option value="">Select Time</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="Salary">Salary Expectation</label>
+                    <select id="salary_expected" name="salary_expected" required>
+                        <option value="">Select Salary</option>
+                        <option value="1k">1k</option>
+                        <option value="2k">2k</option>
+                        <option value="3k">3k</option>
+                        <option value="4k">4k</option>
+                        <option value="5k">5k</option>
+                        <option value="6k">6k</option>
+                        <option value="7k">7k</option>
+                        <option value="8k">8k</option>
+                        <option value="9k">9k</option>
+                        <option value="10k">10k</option>
+                        <option value="11k">11k</option>
+                        <option value="12k">12k</option>
+                        <option value="13k">13k</option>
+                        <option value="14k">14k</option>
+                        <option value="15k">15k</option>
+                        <option value="16k">16k</option>
+                        <option value="17k">17k</option>
+                        <option value="18k">18k</option>
+                        <option value="19k">19k</option>
+                        <option value="20k">20k</option>
+                        <option value="21k">21k</option>
+                        <option value="22k">22k</option>
+                        <option value="23k">23k</option>
+                        <option value="24k">24k</option>
+                        <option value="25k">25k</option>
+                        <option value="26k">26k</option>
+                        <option value="27k">27k</option>
+                        <option value="28k">28k</option>
+                        <option value="29k">29k</option>
+                        <option value="30k">30k</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="Experience">Experience</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select Experience</option>
+                        <option value="1 year">1 year</option>
+                        <option value="3 years">3 years</option>
+                        <option value="5+ years">5+ years</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="Work">Work To Do</label>
+                    <select id="maid_work" name="maid_work" required>
+                        <option value="">Choose the chore</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Cooking">Cooking</option>
+                        <option value="Babysitting">Babysitting</option>
+                    </select>
+                </div>
+            
+                <div class="buttons">
+                    <button type="submit" class="submit">Add</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

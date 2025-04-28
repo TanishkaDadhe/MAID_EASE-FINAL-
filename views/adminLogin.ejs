@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/styles/userLoginStyle.css">
+</head>
+<body>
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/contactUs">Contact Us</a>
+    </div>
+
+    <div class="wrapper">
+        <form id="loginForm" method="POST" action="/AdminLoginCheck">
+            <h1>Admin Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Admin ID" name="admin_id" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" name="admin_pass" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin-top: 50px;
+    background: #f0f0f0; /* Light background for contrast */
+    background-image: url('../images/image3.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+}
+
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.taskbar a {
+    color: #404040;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.select-maid-button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.select-maid-button:hover {
+    background-color: #4a148c;
+}
+
+.requests-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.requests-table th, .requests-table td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px;
+}
+
+.requests-table th {
+    /* background-color: #f1ca56; */
+    /* background-color: #fabc00; */
+    background-color: #f8b200;
+}
+
+.requests-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.requests-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Status Colors for Accepted and Declined */
+.accepted-status {
+    color: rgb(1, 108, 1);
+    font-weight: 1000;
+}
+
+.declined-status {
+    color: rgb(225, 2, 2);
+    font-weight: 1000;
+}
+
+.requests-table p {
+    font-weight: bold; 
+    color: rgb(0, 0, 0); 
+}
+

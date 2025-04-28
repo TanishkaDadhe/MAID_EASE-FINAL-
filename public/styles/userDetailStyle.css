@@ -1,0 +1,278 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: url('https://cdn.prod.website-files.com/5fd1f810f64b2873ff6f19bd/6020cb22035bcf6ef9dd4a72_home-cleaning-hero.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    background: #f0f0f0; /* Light background for contrast */
+    background-image: url('../images/image3.jpg');
+    background-size: cover; /* Make the background image cover the entire body */
+}
+
+
+.taskbar {
+    background: linear-gradient(90deg, #e3e2de, #e3e2de); 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.taskbar a {
+    color: #404040; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.taskbar a:hover {
+    color: #d9b139;
+}
+
+
+/* Main container layout */
+.container {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    /* background: linear-gradient(to right, #f1ca56de, #e89b0de3); */
+    /* background: linear-gradient(to right, #5d23b9bd, rgba(218, 161, 17, 0.906)); */
+    background: linear-gradient(to right, #5618bad4, rgba(229, 156, 0, 0.94));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 850px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    
+}
+
+/* Center the form on the page */
+/* .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+} */
+
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Form Fields */
+.input-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+
+/* Centering the yellow section */
+.info-section {
+    background: linear-gradient(90deg, #efc443, #e89b0d);  /* Yellow background */
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Flexbox Layout to align form and yellow section */
+.form-wrapper {
+    display: flex;
+    background-color: #d9b139;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.left-panel {
+    width: 35%;
+    background: #ffffff;
+    padding: 40px;
+    text-align: center;
+    /* border-radius: 20px; */
+}
+
+
+.avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    padding: 20px;
+}
+
+
+.left-panel h2 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+
+
+.arrow-button {
+    font-size: 24px;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.right-panel {
+    width: 65%;
+    /* background-color: #ffc32cd8; */
+    background-color: #f4b61a;
+    padding: 40px;
+}
+
+.right-panel header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.gender-options,
+.membership-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.gender-options input,
+.membership-options input {
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+
+.right-panel header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Square input fields */
+input[type="text"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="email"], 
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 0;  /* Ensures Square Inputs */
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    background: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Style for the submit button */
+.submit {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    display: block;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.submit:hover {
+    background-color: #4a148c;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligible Maids</title>
+    <link rel="stylesheet" href="/styles/eligibleMaidsStyle.css">
+</head>
+<body>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <a href="/">Home</a>
+        <a href="/contactUs">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Eligible Maids</h2>
+        <br>
+        <div class="cards-container">
+            <!-- Example of a maid card -->
+            <% maids.forEach(maid => { %>
+                <div class="maid-card">
+                    <h3><%= maid.maid_name %></h3> <br>
+                    <p><strong>Gender:</strong> <%= maid.maid_gender %></p>
+                    <p><strong>Experience:</strong> <%= maid.experience %></p>
+                    <p><strong>Address:</strong> <%= maid.maid_address %></p>
+                    <form method="POST" action="/contactMaid">
+                        <input type="hidden" name="name" value="<%= maid.maid_name %>">
+                        <input type="hidden" name="gender" value="<%= maid.maid_gender %>">
+                        <input type="hidden" name="experience" value="<%= maid.experience %>">
+                        <input type="hidden" name="address" value="<%= maid.maid_address %>">
+                        <button type="submit" class="contact-button">Contact</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
