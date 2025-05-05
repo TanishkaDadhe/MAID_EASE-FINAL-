@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const session = require("express-session");
 
@@ -23,12 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'MAIDEASE',
-  password: 't45()#caT'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD
 });
-
 
 //Home route
 app.get("/", (req,res) => {  //HOME ROUTE : to fetch the home page
